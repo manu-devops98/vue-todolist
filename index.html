@@ -16,8 +16,8 @@
     <div id="app" class="container">
         <h1 class="title">Todo List App</h1>
         <div class="input">
-            <input type="text" placeholder="Inserisci nota">
-            <i class="fas fa-plus-square"></i>
+            <input v-model="note" type="text" placeholder="Inserisci nota">
+            <i @click="newBox()" class="fas fa-plus-square"></i>
         </div>
         <div class="container-box">
             <div v-for="(box,index) in lists" class="box">
