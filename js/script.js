@@ -4,24 +4,28 @@ const app = new Vue({
         lists: [
             {
                 title: 'Spesa',
-                check: 'fas fa-times red'
+                check: 'fas fa-check green',
             },
             {
                 title: 'Progetto',
-                check: 'fas fa-check green'
+                check: 'fas fa-times red',  
             },
             {
                 title: 'Regali',
-                check: 'fas fa-check green'
+                check: 'fas fa-check green',
             },
             {
-                title: 'Chiamare Agenzia',
-                check: 'fas fa-times red'
+                title: 'Pulire',
+                check: 'fas fa-times red',     
             },
             {
                 title: 'Lavare Auto',
-                check: 'fas fa-check green'
+                check: 'fas fa-check green',
             }
         ]
+    },
+    methods: {
+        
     }
-  })
+  });
+
