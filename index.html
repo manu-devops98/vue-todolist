@@ -20,13 +20,13 @@
             <i class="fas fa-plus-square"></i>
         </div>
         <div class="container-box">
-            <div v-for="box in lists" class="box">
+            <div v-for="(box,index) in lists" class="box">
                 <ul :class="box.check == 'fas fa-check green' ? 'border-blue overline' : 'border-red'">
                     <li>{{  box.title  }}</li>
                     <li><i :class="box.check" ></i></li>
                 </ul>
                 <div class="delete">
-                    <i class="fas fa-times-circle"></i>
+                    <i @click="deleteBox(index)" class="fas fa-times-circle"></i>
                 </div>
             </div>
         </div>

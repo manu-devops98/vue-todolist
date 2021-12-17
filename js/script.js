@@ -25,7 +25,9 @@ const app = new Vue({
         ]
     },
     methods: {
-        
+        deleteBox: function(index) {
+            this.lists.splice(index,1);
+        }
     }
   });
 
