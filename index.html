@@ -16,11 +16,11 @@
     <div id="app" class="container">
         <h1 class="title">Todo List App</h1>
         <div class="input">
-            <input v-model="note" type="text" placeholder="Inserisci nota">
+            <input v-on:keyup.enter="newBox" v-model="note" type="text" placeholder="Inserisci nota">
             <i @click="newBox()" class="fas fa-plus-square"></i>
         </div>
         <div class="container-box">
-            <div v-for="(box,index) in lists" class="box">
+            <div @click="changeCheck()" v-for="(box,index) in lists" class="box">
                 <ul :class="box.check == 'fas fa-check green' ? 'border-blue overline' : 'border-red'">
                     <li>{{  box.title  }}</li>
                     <li><i :class="box.check" ></i></li>

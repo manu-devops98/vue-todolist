@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         note: '',
+        class: null,
         lists: [
             {
                 title: 'Spesa',
@@ -44,6 +45,12 @@ const app = new Vue({
             let string = word;
             let stringTwo = string.charAt(0).toUpperCase() + string.slice(1);
             return stringTwo;
+        },
+        changeCheck: function() {
+            if (this.check == 'fas fa-times red') {
+                console.log('booo');
+                return this.check = 'fas fa-check green';
+            }
         }
     }
   });
