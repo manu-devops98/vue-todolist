@@ -78,6 +78,13 @@ body {
 
 .box ul li i {
     font-size: 2em;
+}
+
+.green {
     color: green;
+}
+
+.red {
+    color: red;
 }
 
