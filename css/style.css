@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #3D3E49;
+}
+
+.title {
+    /* margin-left: 2em; */
+    color: #2D69E0;
+    padding: 1em 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.input:focus-within {
+    border: 3px solid #2D69E0;
+}
+
+.input {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+    border: 1px solid crimson;
+    border-radius: 3em;
+    background-color: white;
+}
+
+.input i {
+    font-size: 2.5em;
+    color: #2D69E0;
+}
+
+.input input {
+    width: calc(100% - 5em);
+    border-style: none;
+    outline: none;
+}
+
