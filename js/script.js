@@ -6,23 +6,28 @@ const app = new Vue({
         lists: [
             {
                 title: 'Spesa',
-                check: 'fas fa-check green',
+                check: 'fas fa-check',
+                done: true
             },
             {
                 title: 'Progetto',
-                check: 'fas fa-times red',  
+                check: 'fas fa-times',
+                done: false  
             },
             {
                 title: 'Regali',
-                check: 'fas fa-check green',
+                check: 'fas fa-check',
+                done: true
             },
             {
                 title: 'Pulire',
-                check: 'fas fa-times red',     
+                check: 'fas fa-times',
+                done: false      
             },
             {
                 title: 'Lavare Auto',
-                check: 'fas fa-check green',
+                check: 'fas fa-check',
+                done: true
             }
         ]
     },
@@ -31,11 +36,13 @@ const app = new Vue({
             this.lists.splice(index,1);
         },
         newBox: function() {
-            this.check = 'fas fa-times red';
+            this.check = 'fas fa-times';
+            this.done = false;
             if (this.note != '') {
                 this.title = {
                     title: this.firstLetterUpper(this.note),
-                    check: this.check
+                    check: this.check,
+                    done: this.done
                 };
                 this.lists.unshift(this.title);
                 this.note = '';
@@ -46,12 +53,11 @@ const app = new Vue({
             let stringTwo = string.charAt(0).toUpperCase() + string.slice(1);
             return stringTwo;
         },
-        changeCheck: function() {
-            if (this.check == 'fas fa-times red') {
-                console.log('booo');
-                return this.check = 'fas fa-check green';
-            }
+        changeDone: function(index) {
+            this.lists[index].done = !this.lists[index].done;
+            return
         }
+        
     }
   });
 
