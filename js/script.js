@@ -55,7 +55,6 @@ const app = new Vue({
         },
         changeDone: function(index) {
             this.lists[index].done = !this.lists[index].done;
-            return
         }
         
     }
